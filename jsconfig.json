@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "allowSyntheticDefaultImports": false,
+    "baseUrl": "./",
+    "paths": {
+      "@app": ["src/*"],
+      "@config": ["src/config/*"],
+      "@service": ["src/service/*"],
+      "@model": ["src/model/*"],
+      "@controller": ["src/controller/*"],
+
+
+
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}

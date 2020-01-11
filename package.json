@@ -1,0 +1,28 @@
+{
+  "name": "createUser",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon ./server.js"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "axios": "^0.19.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "module-alias": "^2.2.2",
+    "mongoose": "^5.8.7"
+  },
+  "_moduleAliases": {
+    "@": "./src",
+    "@app": "./src/app.js",
+    "@config": "./src/config",
+    "@service": "./src/service",
+    "@model": "./src/model",
+    "@controller": "./src/controller"
+  }
+}

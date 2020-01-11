@@ -1,0 +1,10 @@
+node_modules/
+
+#log
+*.log
+yarn-error.log*
+
+#enviroment variables file
+.env
+
+package-lock.json
