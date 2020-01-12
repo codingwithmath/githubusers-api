@@ -1,6 +1,12 @@
 const axios = require('axios')
 const Dev = require('../model/Dev');
 module.exports = {
+  async index (req, res) {
+    const { page = 1 } = req.query;
+    const devs = await Dev.paginate({}, {page, limit: 5});
+
+    return res.json(devs);
+  },
   async store(req, res) {
     const { username } = req.body;
 

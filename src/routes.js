@@ -2,9 +2,7 @@ const routes = require('express').Router();
 const DevController = require('@controller/Dev')
 
 routes
-.get('/api', (req, res) => {
-  res.send({API: "Running"});
-})
+.get('/devs', DevController.index)  
 .post('/dev', DevController.store);
 
 module.exports = routes;
