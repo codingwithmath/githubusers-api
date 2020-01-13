@@ -1,5 +1,6 @@
 const axios = require('axios')
 const Dev = require('../model/Dev');
+
 module.exports = {
   async index (req, res) {
     const { page = 1 } = req.query;
@@ -7,6 +8,7 @@ module.exports = {
 
     return res.json(devs);
   },
+
   async store(req, res) {
     const { username } = req.body;
 
@@ -28,6 +30,12 @@ module.exports = {
       avatar
     })
     console.log(`User ${username} created.`)
+    return res.json(dev);
+  },
+
+  async show (req, res) {
+    const dev = await Dev.findById(req.params.id);
+
     return res.json(dev);
   }
 }
